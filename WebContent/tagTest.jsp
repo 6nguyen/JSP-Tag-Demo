@@ -15,7 +15,7 @@ The time on the server now is ${time}
 <!-- Set up some sample data to test the forEach tag -->
 <%
 	String[] cities = {"Tustin", "Irvine", "Los Angeles"};
-	pageContext.setAttributes("myCities", cities);
+	pageContext.setAttribute("myCities", cities);
 %>
 
 <!-- Using the forEach tag to print out each city on its own line -->

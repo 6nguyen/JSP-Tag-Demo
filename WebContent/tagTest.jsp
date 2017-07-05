@@ -1,6 +1,11 @@
 <!-- Add reference to JSTL tag library -->
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
+<!-- import java utils to create table -->
+<!-- import Student class from com.nguyen92.jsp.tagDemo package -->
+<%@ page import="java.util.*,com.nguyen92.jsp.tagDemo.Student" %>
+
+
 <html>
 <head>
 <title>JSTL Tag Demo</title>

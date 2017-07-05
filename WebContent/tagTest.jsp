@@ -49,6 +49,21 @@ My favorite cities:
 	pageContext.setAttribute("myStudents",students);
 %>
 
+<table border="1">
+
+<tr>
+	<th>First Name</th>
+	<th>Last Name</th>
+	<th>Cum Laude</th>
+</tr>
+
+	<c:forEach var="currentStudent" items="${myStudents}">
+		${currentStudent.firstName} ${currentStudent.lastName}, ${currentStudent.cumLaude}
+		<br/>
+	</c:forEach>
+
+</table>
+
 
 </body>
 

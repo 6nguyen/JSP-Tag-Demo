@@ -10,14 +10,18 @@
 <head>
 <title>JSTL Tag Demo</title>
 </head>
-<body>
 
+
+<body>
+<!-- DATE TAG ****************************** -->
 <!-- Use tag from JSTL lib to create the current date and assigne to var -->
 <c:set var="time" value="<%= new java.util.Date() %>" />
 
 The time on the server now is ${time}
 <br/><br/>
 
+
+<!-- FOR EACH TAG ****************************** -->
 <!-- Set up some sample data to test the forEach tag -->
 <%
 	String[] cities = {"Tustin", "Irvine", "Los Angeles"};
@@ -30,6 +34,21 @@ My favorite cities:
 <c:forEach var="currentCity" items="${myCities}">
 	${currentCity} <br/>
 </c:forEach>
+<br/><br/>
+
+
+
+<!-- TABLE TAG ****************************** -->
+<!-- Set up sample data to create Student objects -->
+<%
+	List<Student> students = new ArrayList<>();
+	students.add(new Student("George","Wynn",true));
+	students.add(new Student("Ashley","Simpson",false));
+	students.add(new Student("Jeremy","Munoz",false));
+	
+	pageContext.setAttribute("myStudents",students);
+%>
+
 
 </body>
 

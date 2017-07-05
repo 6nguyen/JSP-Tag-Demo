@@ -38,7 +38,7 @@ My favorite cities:
 
 
 
-<!-- TABLE TAG ****************************** -->
+<!-- TABLE USING FOR EACH TAG ****************************** -->
 <!-- Set up sample data to create Student objects -->
 <%
 	List<Student> students = new ArrayList<>();
@@ -49,7 +49,13 @@ My favorite cities:
 	pageContext.setAttribute("myStudents",students);
 %>
 
-<table border="1">
+<!-- HTML CHEAT SHEET -->
+<!-- 
+	<tr> table row
+	<th> table header; title of the column
+	<td> table data; data in each cell
+ -->
+<table border="2">
 
 <tr>
 	<th>First Name</th>

@@ -54,12 +54,15 @@ My favorite cities:
 <tr>
 	<th>First Name</th>
 	<th>Last Name</th>
-	<th>Cum Laude</th>
+	<th>Graduated Cum Laude</th>
 </tr>
 
 	<c:forEach var="currentStudent" items="${myStudents}">
-		${currentStudent.firstName} ${currentStudent.lastName}, ${currentStudent.cumLaude}
-		<br/>
+		<tr>
+			<td>${currentStudent.firstName}</td>
+			<td>${currentStudent.lastName}</td>
+			<td>${currentStudent.cumLaude}</td>
+		</tr>
 	</c:forEach>
 
 </table>

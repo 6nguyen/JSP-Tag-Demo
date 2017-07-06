@@ -67,7 +67,14 @@ My favorite cities:
 		<tr>
 			<td>${currentStudent.firstName}</td>
 			<td>${currentStudent.lastName}</td>
-			<td>${currentStudent.cumLaude}</td>
+			<td>
+				<c:if test="${currentStudent.cumLaude}">
+					Cum Laude
+				</c:if>
+				<c:if test="${not currentStudent.cumLaude}">
+					Dean's List
+				</c:if>
+			</td>
 		</tr>
 	</c:forEach>
 

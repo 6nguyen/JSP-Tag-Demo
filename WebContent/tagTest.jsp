@@ -42,9 +42,9 @@ My favorite cities:
 <!-- Set up sample data to create Student objects -->
 <%
 	List<Student> students = new ArrayList<>();
-	students.add(new Student("George","Wynn",true));
-	students.add(new Student("Ashley","Simpson",false));
-	students.add(new Student("Jeremy","Munoz",false));
+	students.add(new Student("George","Wynn",true,true));
+	students.add(new Student("Ashley","Simpson",false,false));
+	students.add(new Student("Jeremy","Munoz",false,true));
 	
 	pageContext.setAttribute("myStudents",students);
 %>
@@ -60,7 +60,8 @@ My favorite cities:
 <tr>
 	<th>First Name</th>
 	<th>Last Name</th>
-	<th>Graduated Cum Laude</th>
+	<th>Honors</th>
+	<th>Employment Status</th>
 </tr>
 
 	<c:forEach var="currentStudent" items="${myStudents}">
@@ -74,6 +75,16 @@ My favorite cities:
 				<c:if test="${not currentStudent.cumLaude}">
 					Dean's List
 				</c:if>
+			</td>
+			<td>
+				<c:choose>
+					<c:when test="${currentStudent.employed}">
+						Employed
+					</c:when>
+					<c:otherwise>
+						Unemployed
+					</c:otherwise>
+				</c:choose>
 			</td>
 		</tr>
 	</c:forEach>

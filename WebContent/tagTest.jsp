@@ -1,5 +1,7 @@
-<!-- Add reference to JSTL tag library -->
+<!-- Add reference to JSTL core tags library -->
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!-- Add reference to JSTL function tags lib -->
+<%@ taglib uri="http://java.sun.com/jsp/jstl/function" prefix="fn" %>
 
 <!-- import java utils to create table -->
 <!-- import Student class from com.nguyen92.jsp.tagDemo package -->
